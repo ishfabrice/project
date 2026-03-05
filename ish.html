@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="fab">
+  <input type="text" id="name" placeholder="Name">
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button type="submit">Submit</button>
+</form>
+
+<p id="error"></p>
+
+<script>
+document.getElementById("fab").addEventListener("submit", function(e) {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let error = "";
+
+  if (name.length < 3) {
+   alert("Name must be at least 3 characters")
+  } 
+  else if (!email.includes("@")) {
+    alert("Enter a valid email";)
+  } 
+  else if (password.length < 8) {
+    alert("Password must be at least 6 characters";)
+  }
+
+  if (error !== "") {
+    e.preventDefault(); 
+    document.getElementById("error").innerText = error;
+  }
+});
+</script>
+</body>
+</html>
