@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mu">
+        <input id="ish">
+        <div id="div">
+            <button onclick="fab(1)">1</button>
+            <button onclick="fab(2)">2</button>
+            <button onclick="fab(3)">3</button>
+            <button onclick="fab(4)">4</button>
+            <button onclick="fab(5)">5</button>
+            <button onclick="fab(6)">6</button>
+            <button onclick="fab(7)">7</button>
+            <button onclick="fab(8)">8</button>
+            <button onclick="fab(9)">9</button>
+            <button onclick="fab(0)">0</button>
+            <button onclick="fab('.')">.</button>
+            <button onclick="fab('/')">/</button>
+            <button onclick="fab('+')">+</button>
+            <button onclick="fab('-')">-</button>
+            <button onclick="fab('*')">*</button>
+            <button onclick="del()">x</button>
+            <button onclick="equar()">=</button>
+        </div>
+    </div>
+    <script>
+      const btn=document.getElementById("ish")
+      function fab(input){
+        ish.value +=input;
+      }
+      function del(){
+        ish.value="";
+      }
+      function equar()
+      {
+        ish.value=eval(ish.value);
+      }
+    </script>
+</body>
+</html>
